@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Phú An Shop</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="img/iconshop.png" rel="shortcut icon" />
+      <link href="css/BTL.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/themify-icons/themify-icons.css">
+      <script src="js/thongbaomuahang.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.js" 
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script src="js/backtop.js"></script>
+      <link href="css/BTL.css" rel="stylesheet" />
+      <script src="js/carousel.js"></script>
+  </head>
+  <body>
+      <div id="container"></div>
+          <header>
+              <div>
+                  <div class="shop">
+                      <a href="#" title="Phú An Shop" rel="home">
+                          <img src="img/Shoppe.png" alt="Shop" />
+                      </a>
+                      <form class="form-inline search" action="/action_page.php">
+                        <div>
+                            <input id="search" type="search" placeholder="Nhập sản phẩm bạn muốn tìm kiếm" value=""/>
+                        </div>
+                        <div>
+                            <button class="icon-search" id="button" onclick="search()" type="submit" value="Tìm kiếm">
+                              <i class="ti-search" alt="Tìm kiếm"></i>
+                            </button>
+                        </div>
+                      </form>
+                      <a href="#" class="basket"><img src="img/shopping-cart.png" alt="basket" /></a>
+                  </div>
+              </div>
+              <nav id="nav" class="nav">
+                <ul>
+                    <li><a style="font-weight: bolder; color: white; background-color: #fa9e14;"
+                        href="./index.html">Trang Chủ</a></li>
+                    <li><a href="./GioiThieu.html">Giới thiệu</a></li>
+                    <li class="nav-item dropdown">
+                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Đồ Dùng Học Sinh
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Vở học sinh</a>
+                        <a class="dropdown-item" href="#">Bút học sinh</a>
+                        <a class="dropdown-item" href="#">Dụng cụ học tập</a>
+                        <a class="dropdown-item" href="#">Balo - Túi Cặp</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Văn Phòng Phẩm
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Đồ dùng văn phòng</a>
+                        <a class="dropdown-item" href="#">Giấy văn phòng</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Đồ chơi
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Đồ chơi điện tử</a>
+                        <a class="dropdown-item" href="#">Đồ chơi thủ công</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Sản phẩm khuyến mãi
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Combo khuyến mãi mỗi tháng</a>
+                        <a class="dropdown-item" href="#">Combo khuyến mãi đầu năm học</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Mỹ phẩm
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Kem</a>
+                        <a class="dropdown-item" href="#">Sữa rửa mặt</a>
+                        <a class="dropdown-item" href="#">Sữa tắm - dầu gội</a>
+                        <a class="dropdown-item" href="#">Nước hoa</a>
+                        <a class="dropdown-item" href="#">Đồ dùng sinh hoạt</a>
+                      </div>
+                    </li>
+                    <li><a href="#footer">Liên Hệ</a></li>
+                    <li class="nav-item dropdown">
+                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Tài khoản
+                      </a>
+                      <div class="dropdown-menu">
+                        <a style="color: blue;" class="dropdown-item" href="#">Đăng nhập</a>
+                        <a style="color: green;" class="dropdown-item" href="#">Đăng kí</a>
+                      </div>
+                    </li>
+                </ul>
+              </nav>
+        </header>
+        <div id="slider">
+          <div class="slider-images"></div>
+        </div>
+
+        <div id="content">
+          <img style="width: 1350px; padding-top: 24px;" src="../Images/book2.jpg" alt="">
+          <div class="menu1">
+              <h3 text-align="center">XEM THÊM TIN</h3>
+              <hr>
+              <div>
+                  <ul>
+                      <li><a href="#">Bảng giá sách 5/2020</a></li>
+                      <hr>
+                      <li><a href="#">Kết quả bốc thăm may mắn</a></li>
+                      <hr>
+                      <li><a href="#">Mẫu sách mới 2020</a></li>
+                      <hr>
+                      <li><a href="#">Cập nhật sách hot trong năm </a></li>
+                      <hr>
+                      <li><a href="#">Chiến dịch của cửa hàng</a></li>
+                      <hr>
+                      <li><a href="#">Khẳng định chất riêng của Sách</a></li>
+                      <hr>
+                      <li><a href="#">Sự kiện Sách nổi bật</a></li>
+                      <hr>
+                      <li><a href="#">Bảng giá sách kinh doanh 6/2020</a></li>
+                  </ul>
+              </div>
+              <img style="width: 288px; height: 180px;" src="../Images/muichia.png" alt="">
+              <h3>HỖ TRỢ TRỰC TUYẾN</h3>
+              <div style="text-align: center; font-size: 20px;" class="ti-headphone-alt"> Tư Vấn</div>
+              <br>
+              <p style="text-align: center; font-weight: 600; padding: 12px 0px 12px 0px;"> Điện Thoại : 028 3844 1433</p>
+              <br>
+              <img style="width: 280px; padding-left: 4px; border-radius: 10px; padding-bottom: 16px;" src="../Images/logo-sach(3).jpg">
+
+
+          </div>
+          <div id="khoangtrong1"></div>
+          <div class="sub-container">
+              <h2 id="text-content">SÁCH MỚI CẬP NHẬT <img src="../Images/new.jpg.gif" alt=""></h2>
+              <!-- hang 1 -->
+              <div class="main-content1 subimg1">
+                  <a href="./ThongTinSach.html#1"><img height="230px" class="img1" src="../Images/DacNhanTam.png" alt="sach"></a>
+                  <p class="text-pic">Đắc Nhân Tâm</p>
+                  <p class="text-pic">210.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
+              </div>
+              <div class="main-content1 subimg2">
+                  <a href="./ThongTinSach.html#2"><img style="width:48%; height: 230px;" class="img1" src="../Images/TheOneThing.gif" alt="sach"></a>
+                  <p class="text-pic">Điều Ý Nghĩa Nhất Trong Cuộc Đời</p>
+                  <p class="text-pic">189.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
+              </div>
+              <div class="main-content1 subimg3">
+                  <a href="./ThongTinSach.html#3"><img height="230px" class="img1" src="../Images/DamNghiLon.jpg" alt="sach"></a>
+                  <p class="text-pic">Dám Nghĩ Lớn</p>
+                  <p class="text-pic">145.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
+              </div>
+              <!-- hang 2 -->
+              <div class="main-content1 subimg4">
+                  <a href="./ThongTinSach.html#4"><img height="230px" class="img1" src="../Images/NhaGiaKim.jpg" alt="sach"></a>
+                  <p class="text-pic">Nhà Giả Kim</p>
+                  <p class="text-pic">199.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
+              </div>
+              <div class="main-content1 subimg5">
+                  <a href="./ThongTinSach.html#5"><img height="230px" class="img1" src="../Images/ThucTinhMucDichSong.jpg" alt="sach"></a>
+                  <p class="text-pic">Thức Tỉnh Mục Đích Sống</p>
+                  <p class="text-pic">104.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
+              </div>
+              <div class="main-content1 subimg6">
+                  <a href="./ThongTinSach.html#6"><img height="230px" class="img1" src="../Images/7ThoiQuenDeThanhDat.jpg" alt="sach"></a>
+                  <p class="text-pic">7 Thói Quen Để Thành Đạt</p>
+                  <p class="text-pic">166.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
+              </div>
+              <!-- hang 3 -->
+              <div class="main-content1 subimg7">
+                  <a href="./ThongTinSach.html#7"><img height="230px" class="img1" src="../Images/NhungBaiHocCuocSong.jpg" alt="sach"></a>
+                  <p class="text-pic">Những Bài Học Cuộc Sống</p>
+                  <p class="text-pic">132.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
+              </div>
+              <div class="main-content1 subimg8">
+                  <a href="./ThongTinSach.html#8"><img height="230px" class="img1" src="../Images/DocViBatKiAi.gif" alt="sach"></a>
+                  <p class="text-pic">Đọc Vị Bất Kì Ai</p>
+                  <p class="text-pic">187.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
+              </div>
+              <div class="main-content1 subimg9">
+                  <a href="./ThongTinSach.html#9"><img height="230px" class="img1" src="../Images/DieuKiDieuCuaThaiDoSong.gif" alt="sach"></a>
+                  <p class="text-pic">Điều Kì Diệu Của Thái Độ Sống</p>
+                  <p class="text-pic">122.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
+              </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+
+        <div id="footer">
+          <marquee class="chuchay1">BOOKSTORE VIỆT NAM ĐEM LẠI SỰ KHÁM PHÁ</marquee>
+          <br /><br />
+          <div class="ketthuc"><a>© 2019 BẢN QUYỀN THUỘC VỀ BOOKSTORE VIỆT NAM</a></div>
+          <br />
+          <div class="info">
+              <h2 style="font-size: 32px; line-height:4px; text-transform: uppercase; letter-spacing: 2px;">Thông Tin Liên Hệ</h2>
+              <div class="text-info">
+                  <i class="ti-location-pin">
+                      Địa chỉ: 192 Phạm Huy Thông, phường 5, Gò Vấp, Hồ Chí Minh<br />
+                  </i>
+                  <i class="ti-mobile"> Điện thoại: 0941622670<br /> </i>
+                  <i class="ti-email"> Email: phuan2017@gmail.com <br /></i>
+                  <i class="ti-world"> Web: <a href="D:\BigProject-Web\html\index.html">www.shopbansach.com</a>
+                      <br /></i>
+              </div>
+              <div class="icon">
+                  <a target="_blank" href="https://www.facebook.com/11012001an/"><i class="ti-facebook"></i></a>
+                  <a target="_blank" href="https://www.youtube.com/channel/UC7oaiP-3mAVxrEbNivGouxQ"><i class="ti-youtube"></i></a>
+                  <a target="_blank" href="https://www.twitter.com"><i class="ti-twitter"></i></a>
+                  <a target="_blank" href="https://www.instagram.com/an.np_it/"><i class="ti-instagram"></i></a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <a id="backtop" href="#container" class="ti-arrow-circle-up"></a>
+    </body>
+</html>
