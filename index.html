@@ -6,102 +6,98 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="static/img/iconshop.png" rel="shortcut icon" />
-      <link href="static/css/BTL.css" rel="stylesheet" />
-      <link rel="stylesheet" href="static/css/themify-icons/themify-icons.css">
+      <link href="static/css/style.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
       <script src="static/js/thongbaomuahang.js"></script>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.6.0.js" 
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.1.js" 
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+      <script src="static/js/header.js"></script>
       <script src="static/js/backtop.js"></script>
   </head>
   <body>
       <div id="main">
           <header>
-              <div>
-                  <div class="shop">
-                      <a href="#" title="Phú An Shop" rel="home">
-                          <img src="static/img/Shoppe.png" alt="Shop" />
-                      </a>
-                      <form class="form-inline search" action="/action_page.php">
-                        <div>
-                            <input id="search" type="search" placeholder="Nhập sản phẩm bạn muốn tìm kiếm" value=""/>
-                        </div>
-                        <div>
-                            <button class="icon-search" id="button" onclick="search()" type="submit" value="Tìm kiếm">
-                              <i class="ti-search" alt="Tìm kiếm"></i>
-                            </button>
-                        </div>
-                      </form>
-                      <a href="#" class="basket"><img src="static/img/shopping-cart.png" alt="basket" /></a>
-                  </div>
+              <div class="shop">
+                  <a href="#" title="Phú An Shop" rel="home">
+                      <img src="static/img/Shoppe.png" alt="Shop" />
+                  </a>
+                  <form class="form-inline search" action="/action_page.php">
+                    <div>
+                        <input id="search" type="search" placeholder="Nhập sản phẩm bạn muốn tìm kiếm" value=""/>
+                    </div>
+                    <div>
+                        <button class="icon-search" id="button" onclick="search()" type="submit" value="Tìm kiếm">
+                          <i class="fa-solid fa-magnifying-glass" alt="Tìm kiếm"></i>
+                        </button>
+                    </div>
+                  </form>
+                  <a href="#" class="basket"><img src="static/img/shopping-cart.png" alt="basket" /></a>
               </div>
-              <nav id="nav" class="nav">
+              <nav id="nav">
                 <ul>
                     <li><a style="font-weight: bolder; color: white; background-color: #fa9e14;"
-                        href="index.html">Trang Chủ</a></li>
+                        href="index.html"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
                     <li><a href="GioiThieu.html">Giới thiệu</a></li>
-                    <li class="nav-item dropdown">
-                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Đồ Dùng Học Sinh
+                    <li>
+                      <a href="#">
+                        Đồ Dùng Học Sinh <i class="fa-sharp fa-solid fa-caret-down"></i>
                       </a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Vở học sinh</a>
-                        <a class="dropdown-item" href="#">Bút học sinh</a>
-                        <a class="dropdown-item" href="#">Dụng cụ học tập</a>
-                        <a class="dropdown-item" href="#">Balo - Túi Cặp</a>
-                      </div>
+                      <ul class="subnav">
+                        <li><a href="#">Vở học sinh</a></li>
+                        <li><a href="#">Bút học sinh</a></li>
+                        <li><a href="#">Dụng cụ học tập</a></li>
+                        <li><a href="#">Balo - Túi Cặp</a></li>
+                      </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Văn Phòng Phẩm
+                    <li>
+                      <a href="#">
+                        Văn Phòng Phẩm <i class="fa-sharp fa-solid fa-caret-down"></i>
                       </a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Đồ dùng văn phòng</a>
-                        <a class="dropdown-item" href="#">Giấy văn phòng</a>
-                      </div>
+                      <ul class="subnav">
+                        <li><a href="#">Đồ dùng văn phòng</a></li>
+                        <li><a href="#">Giấy văn phòng</a></li>
+                      </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Đồ chơi
+                    <li>
+                      <a href="#">
+                        Đồ chơi <i class="fa-sharp fa-solid fa-caret-down"></i>
                       </a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Đồ chơi điện tử</a>
-                        <a class="dropdown-item" href="#">Đồ chơi thủ công</a>
-                      </div>
+                      <ul class="subnav">
+                        <li><a href="#">Đồ chơi điện tử</a></li>
+                        <li><a href="#">Đồ chơi thủ công</a></li>
+                      </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Sản phẩm khuyến mãi
+                    <li>
+                      <a href="#">
+                        Sản phẩm khuyến mãi <i class="fa-sharp fa-solid fa-caret-down"></i>
                       </a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Combo khuyến mãi mỗi tháng</a>
-                        <a class="dropdown-item" href="#">Combo khuyến mãi đầu năm học</a>
-                      </div>
+                      <ul class="subnav">
+                        <li><a href="#">Combo khuyến mãi mỗi tháng</a></li>
+                        <li><a href="#">Combo khuyến mãi đầu năm học</a></li>
+                      </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Mỹ phẩm
+                    <li>
+                      <a href="#">
+                        Mỹ phẩm <i class="fa-sharp fa-solid fa-caret-down"></i>
                       </a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Kem</a>
-                        <a class="dropdown-item" href="#">Sữa rửa mặt</a>
-                        <a class="dropdown-item" href="#">Sữa tắm - dầu gội</a>
-                        <a class="dropdown-item" href="#">Nước hoa</a>
-                        <a class="dropdown-item" href="#">Đồ dùng sinh hoạt</a>
-                      </div>
+                      <ul class="subnav">
+                        <li><a href="#">Kem</a></li>
+                        <li><a href="#">Sữa rửa mặt</a></li>
+                        <li><a href="#">Sữa tắm - dầu gội</a></li>
+                        <li><a href="#">Nước hoa</a></li>
+                        <li><a href="#">Đồ dùng sinh hoạt</a></li>
+                      </ul>
                     </li>
                     <li><a href="#footer">Liên Hệ</a></li>
-                    <li class="nav-item dropdown">
-                      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Tài khoản
+                    <li>
+                      <a href="#">
+                        Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i>
                       </a>
-                      <div class="dropdown-menu">
-                        <a style="color: blue;" class="dropdown-item" href="formDangNhap.html">Đăng nhập</a>
-                        <a style="color: green;" class="dropdown-item" href="formDangKi.html">Đăng kí</a>
-                      </div>
+                      <ul class="subnav">
+                        <li><a style="color: blue;" href="formDangNhap.html"><i class="fa-solid fa-user"></i> Đăng nhập</a></li>
+                        <li><a style="color: green;" href="formDangKi.html"><i class="fa-solid fa-right-from-bracket"></i> Đăng kí</a></li>
+                      </ul>
                     </li>
                 </ul>
               </nav>
@@ -110,7 +106,7 @@
           <div class="slider-images"></div>
         </div>
 
-        <div id="content">
+        <div id="content" class="container">
           <img style="width: 1350px; padding-top: 24px;" onerror="this.src='img/404.jpg'" src="Images/book2.jpg" alt="">
           <div class="menu1">
               <h3 text-align="center">XEM THÊM TIN</h3>
@@ -199,7 +195,6 @@
           <div class="clear"></div>
         </div>
 
-
         <div id="footer">
           <marquee class="chuchay1">BOOKSTORE VIỆT NAM ĐEM LẠI SỰ KHÁM PHÁ</marquee>
           <br /><br />
@@ -225,6 +220,6 @@
           </div>
         </div>
       </div>
-      <a id="backtop" href="#container" class="ti-arrow-circle-up"></a>
+      <a id="backtop" href="#main" class="fa-solid fa-circle-chevron-up"></a>
     </body>
 </html>
