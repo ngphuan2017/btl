@@ -19,20 +19,26 @@
       <div id="main">
           <header>
               <div class="shop">
-                  <a class="logo" href="index.html" title="Phú An Shop" rel="home">
-                      <img src="static/img/logo.png" alt="Phú An Shop" />
-                  </a>
-                  <form class="form-inline search" action="/action_page.php">
-                    <div>
-                        <input id="search" type="search" placeholder="Nhập sản phẩm bạn muốn tìm kiếm" value=""/>
+                <div class="inline-block logo">
+                  <a href="index.html" title="Phú An Shop" rel="home">
+                    <img src="static/img/logo.png" alt="Phú An Shop" />
+                </a>
+                </div>
+                <div class="inline-block search">
+                  <form class="form-inline" action="/action_page.php">
+                    <div class="inline-block text-search">
+                        <input id="text-search" type="search" placeholder="Nhập sản phẩm bạn muốn tìm kiếm" value=""/>
                     </div>
-                    <div>
-                        <button class="icon-search" id="button" onclick="search()" type="submit" value="Tìm kiếm">
+                    <div class="inline-block btn-search">
+                        <button id="btn-search" onclick="search()" type="submit" value="Tìm kiếm">
                           <i class="fa-solid fa-magnifying-glass" alt="Tìm kiếm"></i>
                         </button>
                     </div>
                   </form>
-                  <a href="#" class="basket btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="inline-block basket">
+                    <a href="#" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
               </div>
               <nav id="nav">
                 <ul>
@@ -121,7 +127,7 @@
                   <p class="product-name">Bút xóa Thiên Long</p>
                   <p class="price">26.000&#8363; <del class="del-price">29.000&#8363;</del></p>
                 </a>
-                <a href="" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
+                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="product-item">
                 <a href="">
@@ -129,7 +135,7 @@
                   <p class="product-name">Bút lông bảng Thiên Long</p>
                   <p class="price">6.800&#8363; <del class="del-price">8.700&#8363;</del></p>
                 </a>
-                <a href="" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
+                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="product-item">
                 <a href="">
@@ -137,7 +143,7 @@
                   <p class="product-name">Bút lông dầu Thiên Long</p>
                   <p class="price">10.800&#8363; <del class="del-price">12.000&#8363;</del></p>
                 </a>
-                <a href="" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
+                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="product-item">
                 <a href="">
@@ -145,7 +151,7 @@
                   <p class="product-name">Bút bi Thiên Long</p>
                   <p class="price">4.500&#8363; <del class="del-price">5.000&#8363;</del></p>
                 </a>
-                <a href="" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
+                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="product-item">
                 <a href="">
@@ -153,7 +159,7 @@
                   <p class="product-name">Khẩu trang Y tế</p>
                   <p class="price">33.000&#8363; <del class="del-price">35.000&#8363;</del></p>
                 </a>
-                <a href="" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
+                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="product-item">
                 <a href="">
@@ -161,7 +167,7 @@
                   <p class="product-name">Bút dạ quang Thiên Long</p>
                   <p class="price">9.000&#8363; <del class="del-price">10.000&#8363;</del></p>
                 </a>
-                <a href="" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
+                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="clear"></div>
             </div>
