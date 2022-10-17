@@ -8,7 +8,6 @@
       <link href="static/img/iconshop.png" rel="shortcut icon" />
       <link href="static/css/style.css" rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-      <script src="static/js/thongbaomuahang.js"></script>
       <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
       <script src="https://code.jquery.com/jquery-3.6.1.js" 
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
@@ -127,7 +126,7 @@
                   <p class="product-name">Bút xóa Thiên Long</p>
                   <p class="price">26.000&#8363; <del class="del-price">29.000&#8363;</del></p>
                 </a>
-                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="product-item">
                 <a href="">
@@ -135,7 +134,7 @@
                   <p class="product-name">Bút lông bảng Thiên Long</p>
                   <p class="price">6.800&#8363; <del class="del-price">8.700&#8363;</del></p>
                 </a>
-                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="product-item">
                 <a href="">
@@ -143,7 +142,7 @@
                   <p class="product-name">Bút lông dầu Thiên Long</p>
                   <p class="price">10.800&#8363; <del class="del-price">12.000&#8363;</del></p>
                 </a>
-                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="product-item">
                 <a href="">
@@ -151,7 +150,7 @@
                   <p class="product-name">Bút bi Thiên Long</p>
                   <p class="price">4.500&#8363; <del class="del-price">5.000&#8363;</del></p>
                 </a>
-                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="product-item">
                 <a href="">
@@ -159,7 +158,7 @@
                   <p class="product-name">Khẩu trang Y tế</p>
                   <p class="price">33.000&#8363; <del class="del-price">35.000&#8363;</del></p>
                 </a>
-                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="product-item">
                 <a href="">
@@ -167,7 +166,7 @@
                   <p class="product-name">Bút dạ quang Thiên Long</p>
                   <p class="price">9.000&#8363; <del class="del-price">10.000&#8363;</del></p>
                 </a>
-                <button type="submit" onclick="thongBao()" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="clear"></div>
             </div>
@@ -272,93 +271,7 @@
               </div>
             </div>
           </div>
-          <div class="menu1">
-              <h3 text-align="center">XEM THÊM TIN</h3>
-              <hr>
-              <div>
-                  <ul>
-                      <li><a href="#">Bảng giá sách 5/2020</a></li>
-                      <hr>
-                      <li><a href="#">Kết quả bốc thăm may mắn</a></li>
-                      <hr>
-                      <li><a href="#">Mẫu sách mới 2020</a></li>
-                      <hr>
-                      <li><a href="#">Cập nhật sách hot trong năm </a></li>
-                      <hr>
-                      <li><a href="#">Chiến dịch của cửa hàng</a></li>
-                      <hr>
-                      <li><a href="#">Khẳng định chất riêng của Sách</a></li>
-                      <hr>
-                      <li><a href="#">Sự kiện Sách nổi bật</a></li>
-                      <hr>
-                      <li><a href="#">Bảng giá sách kinh doanh 6/2020</a></li>
-                  </ul>
-              </div>
-              <img style="width: 288px; height: 180px;" src="Images/muichia.png" alt="">
-              <h3>HỖ TRỢ TRỰC TUYẾN</h3>
-              <div style="text-align: center; font-size: 20px;" class="ti-headphone-alt"> Tư Vấn</div>
-              <br>
-              <p style="text-align: center; font-weight: 600; padding: 12px 0px 12px 0px;"> Điện Thoại : 028 3844 1433</p>
-              <br>
-              <img style="width: 280px; padding-left: 4px; border-radius: 10px; padding-bottom: 16px;" src="Images/logo-sach(3).jpg">
-
-
-          </div>
-          <div id="khoangtrong1"></div>
-          <div class="sub-container">
-              <h2 id="text-content">SÁCH MỚI CẬP NHẬT <img src="Images/new.jpg.gif" alt=""></h2>
-              <!-- hang 1 -->
-              <div class="main-content1 subimg1">
-                  <a href="ThongTinSach.html#1"><img height="230px" class="img1" src="Images/DacNhanTam.png" alt="sach"></a>
-                  <p class="text-pic">Đắc Nhân Tâm</p>
-                  <p class="text-pic">210.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
-              </div>
-              <div class="main-content1 subimg2">
-                  <a href="ThongTinSach.html#2"><img style="width:48%; height: 230px;" class="img1" src="Images/TheOneThing.gif" alt="sach"></a>
-                  <p class="text-pic">Điều Ý Nghĩa Nhất Trong Cuộc Đời</p>
-                  <p class="text-pic">189.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
-              </div>
-              <div class="main-content1 subimg3">
-                  <a href="ThongTinSach.html#3"><img height="230px" class="img1" src="Images/DamNghiLon.jpg" alt="sach"></a>
-                  <p class="text-pic">Dám Nghĩ Lớn</p>
-                  <p class="text-pic">145.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
-              </div>
-              <!-- hang 2 -->
-              <div class="main-content1 subimg4">
-                  <a href="ThongTinSach.html#4"><img height="230px" class="img1" src="Images/NhaGiaKim.jpg" alt="sach"></a>
-                  <p class="text-pic">Nhà Giả Kim</p>
-                  <p class="text-pic">199.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
-              </div>
-              <div class="main-content1 subimg5">
-                  <a href="ThongTinSach.html#5"><img height="230px" class="img1" src="Images/ThucTinhMucDichSong.jpg" alt="sach"></a>
-                  <p class="text-pic">Thức Tỉnh Mục Đích Sống</p>
-                  <p class="text-pic">104.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
-              </div>
-              <div class="main-content1 subimg6">
-                  <a href="ThongTinSach.html#6"><img height="230px" class="img1" src="Images/7ThoiQuenDeThanhDat.jpg" alt="sach"></a>
-                  <p class="text-pic">7 Thói Quen Để Thành Đạt</p>
-                  <p class="text-pic">166.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
-              </div>
-              <!-- hang 3 -->
-              <div class="main-content1 subimg7">
-                  <a href="ThongTinSach.html#7"><img height="230px" class="img1" src="Images/NhungBaiHocCuocSong.jpg" alt="sach"></a>
-                  <p class="text-pic">Những Bài Học Cuộc Sống</p>
-                  <p class="text-pic">132.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
-              </div>
-              <div class="main-content1 subimg8">
-                  <a href="ThongTinSach.html#8"><img height="230px" class="img1" src="Images/DocViBatKiAi.gif" alt="sach"></a>
-                  <p class="text-pic">Đọc Vị Bất Kì Ai</p>
-                  <p class="text-pic">187.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
-              </div>
-              <div class="main-content1 subimg9">
-                  <a href="ThongTinSach.html#9"><img height="230px" class="img1" src="Images/DieuKiDieuCuaThaiDoSong.gif" alt="sach"></a>
-                  <p class="text-pic">Điều Kì Diệu Của Thái Độ Sống</p>
-                  <p class="text-pic">122.000 ₫ <input onclick="thongBao()" style="color: red; padding: 4px 6px 4px 6px; cursor: pointer;" type="button" value="Mua"></p>
-              </div>
-          </div>
-          <div class="clear"></div>
         </div>
-
         <div id="footer">
           <marquee class="chuchay1">BOOKSTORE VIỆT NAM ĐEM LẠI SỰ KHÁM PHÁ</marquee>
           <br /><br />
@@ -403,6 +316,33 @@
           </div>
         </div>
       </div>
-      <a id="backtop" href="#main" class="fa-solid fa-circle-chevron-up"></a>
+      <a id="backtop" href="#main" class="gototop fa-solid fa-circle-chevron-up"></a>
+      <div class="js-modal">
+        <div class="modal-container js-modal-container">
+          <div class="js-modal-close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <header class="modal-header">
+            <img style="padding-top: 5%;" src="static/img/shopping-cart.png" alt="cart"><p style="margin-top: 3%;">Giỏ Hàng</p>
+          </header>
+          <div class="modal-body">
+            <div class="modal-img">
+              <img src="static/img/Top/z3221786161940_53a53a97be21b6ee29c61ed45be9bc24.jpg" alt="">
+            </div>
+            <div class="modal-quantity">
+              <button type="button" class="quantity">-</button>
+              <input style="width: 50px; background-color: #fff;" type="number" class="quantity" id="quantity" maxlength="12" min="1" size="2" value="1" step="0.01">
+              <button type="button" class="quantity">+</button>
+            </div>
+            <div class="btn-buy-product">
+              <button id="btn-buy-product"><i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ hàng</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <p class="modal-help">Need <a href="#">help?</a></p>
+          </div>
+        </div>
+      </div>
+      <script src="static/js/cart.js"></script>
     </body>
 </html>
