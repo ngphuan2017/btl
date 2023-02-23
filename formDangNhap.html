@@ -73,19 +73,48 @@
                             <div class="social-links">
                                 <ul>
                                     <!-- facebook -->
-                                    <li> <a class="facebook" style="text-decoration: none;" href="#" target="blank"><i class="ti-facebook"> </i> </a>
+                                    <li> 
+                                        <a class="facebook" rel="noopener" style="text-decoration: none;" href="#" target="blank"><i class="fa-brands fa-facebook"></i> </a>
                                     </li>
 
                                     <!-- twitter -->
                                     <li>
-                                        <a class="twitter" style="text-decoration: none;" href="#" target="blank"> <i class="ti-twitter"> </i ></a>
-                                        </li>
-                                        <!-- google plus -->
-                                        <li> <a class="googleplus" style="text-decoration: none;" href="#" target="blank"> <i class="ti-google"></i></a>
+                                        <a class="twitter" rel="noopener" style="text-decoration: none;" href="#" target="blank"> <i class="fa-brands fa-twitter"></i></a>
                                     </li>
+                                        <!-- google plus -->
+                                    <li> 
+                                        <a class="googleplus" rel="noopener" style="text-decoration: none;" href="#" target="blank"> <i class="fa-brands fa-google"></i></a>
+                                    </li>
+
+                                        <!-- instagram -->
+                                        <li> 
+                                            <a class="instagram" rel="noopener" style="text-decoration: none;" href="#" target="blank"> <i class="fa-brands fa-instagram"></i></a>
+                                        </li>
                                 </ul>
                             </div>
                         </div>
+                        <div id="my-signin2"></div>
+                        <script>
+                            function onSuccess(googleUser) {
+                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                            }
+                            function onFailure(error) {
+                            console.log(error);
+                            }
+                            function renderButton() {
+                            gapi.signin2.render('my-signin2', {
+                                'scope': 'profile email',
+                                'width': 240,
+                                'height': 50,
+                                'longtitle': true,
+                                'theme': 'dark',
+                                'onsuccess': onSuccess,
+                                'onfailure': onFailure
+                            });
+                            }
+                        </script>
+
+                        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
                         <div class="bottom-text w3_bottom_text">
                             <p>Bạn chưa có tài khoản ?<a href="formDangKi.html"> Đăng kí ngay !</a></p>

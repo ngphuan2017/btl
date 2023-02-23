@@ -13,6 +13,7 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
       <script src="static/js/header.js"></script>
       <script src="static/js/backtop.js"></script>
+      <script src="static/js/countdown.js"></script>
   </head>
   <body>
       <div id="main">
@@ -107,13 +108,63 @@
                 </ul>
               </nav>
         </header>
-        <div id="slider">
+        <div class="container-fluid grid" id="slider">
+          <div class="banner">
+            <div class="clouds">
+                <img src="static/img/cloud1.png" style="--i:1;">
+                <img src="static/img/cloud2.png" style="--i:2;">
+                <img src="static/img/cloud3.png" style="--i:3;">
+            </div>
+          </div>
           <div class="text-slider">
-            <img src="static/img/shops.png" alt="Phú An Shop">
+            <img id="logo-banner" src="static/img/shops.png" alt="Phú An Shop">
             <h4>Giá rẻ và chất lượng</h4>
           </div>
         </div>
-
+        <style>
+          .wrapper  {
+          margin: 50px auto;
+          text-align: center;
+          border: 1px solid #ff0000;
+          padding: 25px;
+          }
+          .dongho{
+          color:#ff0000;
+          font-size:20px;
+          }
+        </style>
+        <div class="wrapper">
+          <span id="countdown" class="dongho"></span>
+          <script>
+            var target_date = new Date("01, 01, 2024").getTime();
+            var days, hours, minutes, seconds;
+            var countdown = document.getElementById("countdown");
+            setInterval(function () {
+            var current_date = new Date().getTime();
+            var seconds_left = (target_date - current_date) / 1000;
+            days = parseInt(seconds_left / 86400);
+            seconds_left = seconds_left % 86400;
+            hours = parseInt(seconds_left / 3600);
+            seconds_left = seconds_left % 3600;
+            minutes = parseInt(seconds_left / 60);
+            seconds = parseInt(seconds_left % 60);
+            countdown.innerHTML = "<strong>Còn " + days + " ngày - " + hours + " giờ - " + minutes + " phút - " + seconds + " giây nữa.</strong>";
+            }, 1000);
+          </script>
+        </div>
+        <!-- dem nguoc -->
+        <div class="main-example">
+          <div class="countdown-container" data-timer="2030/09/05" id="main-example"></div>
+          </div>
+          <script type="text/template" id="main-example-template">
+          <div class="time <%= label %>">
+            <span class="count curr top"><%= curr %></span>
+            <span class="count next top"><%= next %></span>
+            <span class="count next bottom"><%= next %></span>
+            <span class="count curr bottom"><%= curr %></span>
+            <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+          </div>
+          </script>
         <div id="content" class="container">
           <div class="content-section">
             <div class="content-title">
@@ -122,7 +173,7 @@
             <div class="products-block">
               <div class="product-item">
                 <a href="">
-                  <img src="static/img/Top/z3221786161940_53a53a97be21b6ee29c61ed45be9bc24.jpg" alt="" class="product-img">
+                  <img src="static/img/Sale_Top/z3221786161940_53a53a97be21b6ee29c61ed45be9bc24.jpg" alt="" class="product-img">
                   <p class="product-name">Bút xóa Thiên Long</p>
                   <p class="price">26.000&#8363; <del class="del-price">29.000&#8363;</del></p>
                 </a>
@@ -130,7 +181,7 @@
               </div>
               <div class="product-item">
                 <a href="">
-                  <img src="static/img/Top/WB021.jpg" alt="" class="product-img">
+                  <img src="static/img/Sale_Top/WB021.jpg" alt="" class="product-img">
                   <p class="product-name">Bút lông bảng Thiên Long</p>
                   <p class="price">6.800&#8363; <del class="del-price">8.700&#8363;</del></p>
                 </a>
@@ -138,7 +189,7 @@
               </div>
               <div class="product-item">
                 <a href="">
-                  <img src="static/img/Top/PM041.jpg" alt="" class="product-img">
+                  <img src="static/img/Sale_Top/PM041.jpg" alt="" class="product-img">
                   <p class="product-name">Bút lông dầu Thiên Long</p>
                   <p class="price">10.800&#8363; <del class="del-price">12.000&#8363;</del></p>
                 </a>
@@ -146,7 +197,7 @@
               </div>
               <div class="product-item">
                 <a href="">
-                  <img src="static/img/Top/bbt002_0108_163505_tdfXOY.jpg" alt="" class="product-img">
+                  <img src="static/img/Sale_Top/bbt002_0108_163505_tdfXOY.jpg" alt="" class="product-img">
                   <p class="product-name">Bút bi Thiên Long</p>
                   <p class="price">4.500&#8363; <del class="del-price">5.000&#8363;</del></p>
                 </a>
@@ -154,7 +205,7 @@
               </div>
               <div class="product-item">
                 <a href="">
-                  <img src="static/img/Top/z3218931562602_c1ce523c82d7b20fa02debce9c56eba8.jpg" alt="" class="product-img">
+                  <img src="static/img/Sale_Top/z3218931562602_c1ce523c82d7b20fa02debce9c56eba8.jpg" alt="" class="product-img">
                   <p class="product-name">Khẩu trang Y tế</p>
                   <p class="price">33.000&#8363; <del class="del-price">35.000&#8363;</del></p>
                 </a>
@@ -162,7 +213,7 @@
               </div>
               <div class="product-item">
                 <a href="">
-                  <img src="static/img/Top/ThienLongHL-03(FS).jpg" alt="" class="product-img">
+                  <img src="static/img/Sale_Top/ThienLongHL-03(FS).jpg" alt="" class="product-img">
                   <p class="product-name">Bút dạ quang Thiên Long</p>
                   <p class="price">9.000&#8363; <del class="del-price">10.000&#8363;</del></p>
                 </a>
@@ -327,7 +378,7 @@
           </header>
           <div class="modal-body">
             <div class="modal-img">
-              <img src="static/img/Top/z3221786161940_53a53a97be21b6ee29c61ed45be9bc24.jpg" alt="">
+              <img src="static/img/Sale_Top/z3221786161940_53a53a97be21b6ee29c61ed45be9bc24.jpg" alt="">
             </div>
             <div class="modal-quantity">
               <button type="button" class="quantity">-</button>
