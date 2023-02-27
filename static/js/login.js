@@ -1,17 +1,11 @@
-function xuLyDangNhap(){
-    var tk = document.getElementById("tai-khoan");
-    var mk = document.getElementById("mat-khau");
-
-    if (tk == "" || tk == null){
-        alert("Không được bỏ trống tên đăng nhập")
-        return;
+$(document).ready(function(){
+    $('#eye').click(function(){
+        $(this).toggleClass('open');
+        $(this).children('i').toggleClass('fa-eye-slash fa-eye');
+        if($(this).hasClass('open')){
+            $(this).prev().attr('type', 'text');
+        }else{
+            $(this).prev().attr('type', 'password');
         }
-        if (mk == "" || mk == null){
-        alert("Không được bỏ trống mật khẩu")
-        return;
-        }
-        var choice= confirm("Bạn đã đăng nhập thành công\n")
-    if(choice){
-        alert("Chào mừng bạn đến với trang website của chúng tôi")
-    }   
-}
+    });
+});
