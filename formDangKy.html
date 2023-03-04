@@ -7,106 +7,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phú An Shop</title>
     <link href="static/img/iconshop.png" rel="shortcut icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/style.css">
-    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/register.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="static/js/register.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="static/js/header.js"></script>
     <script src="static/js/backtop.js"></script>
 </head>
 
 <body>
-    <div id="container">
-        <div id="header">
-            <ul id="nav">
-                <li><a href="index.html">Trang Chủ</a></li>
-                <li>
-                    <a href="">Phân Loại
-                        <i class="ti-angle-down"></i>
+    
+    <div id="main">
+        <header>
+            <div class="shop">
+                <div class="inline-block logo">
+                    <a href="index.html" title="Phú An Shop" rel="home">
+                    <img src="static/img/logo.png" alt="Phú An Shop" />
                     </a>
-                    <ul class="subnav">
-                        <li><a href="TopHotPick.html">Top Bán Chạy</a></li>
-                        <li><a href="DangGiamGia.html">Đang Giảm Giá</a></li>
-                        <li><a href="SachHay.html">Sách Hay</a></li>
-                    </ul>
-                </li>
-                <li><a href="TinTuc.html">Tin Tức</a></li>
-                <li><a href="GioiThieu.html">Giới Thiệu</a></li>
-                <li><a href="#footer">Liên Hệ</a></li>
-                <li><a href="">Tài Khoản
-                    <i class="ti-angle-down"></i>
-                    </a>
-                    <ul class="subnav">
-                        <li><a href="formDangNhap.html">Đăng Nhập</a></li>
-                        <li><a href="formDangKi.html">Đăng Kí</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <form class="search" action="#">
-                <div>
-                    <input id="kw" type="search" placeholder="Nhập từ khóa bạn muốn tìm kiếm..." value=""/>
-                    <button type="submit" onclick="search()" value="Tìm kiếm">
-                        <i id="search" class="ti-search" alt="Tìm kiếm"></i>
-                    </button>
                 </div>
-            </form>
-        </div>
-
-        <div id="content">
-            <div class="login-form">
-                <!--  Title-->
-                <div class="login-title">
-                    <h1 style="color: red;">Hoàn Thành Đầy Đủ Các Bước Sau Để Đăng Kí Tài Khoản !</h1>
+                <div class="inline-block search">
+                    <form class="form-inline" action="/action_page.php">
+                        <div class="inline-block text-search">
+                            <input id="text-search" type="search" placeholder="Nhập sản phẩm bạn muốn tìm kiếm" value=""/>
+                        </div>
+                        <div class="inline-block btn-search">
+                            <button id="btn-search" onclick="search()" type="submit" value="Tìm kiếm">
+                                <i class="fa-solid fa-magnifying-glass" alt="Tìm kiếm"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="login">
-                    <h2 class="login-header">Đăng Kí Tài Khoản</h2>
-                    <div class="khung-login">
-                        <form class="login-container" action="#" method="post">
-                            <input type="email" placeholder="Tài Khoản/Email" Name="Email" required="">
-                            <input type="password" placeholder="Mật Khẩu" Name="password" required="">
-                            <input type="password" placeholder="Nhập Lại Mật Khẩu" Name="password" required="">
-                            <input type="text" placeholder="Mã Xác Nhận" Name="Email" required="">
-                            <div class="bottom-text w3_bottom_text">
-                                <p><input type="checkbox" required=""> Tôi Đồng Ý Với Điều Khoản Sử Dụng</p>
-                                <p>Điều Khoản Của Chúng Tôi,<a href="#"> Tại Đây !</a></p>
-                            </div>
-                            <input type="submit" value="Đăng Kí">
-                        </form>
+                <div class="inline-block basket">
+                    <a href="#" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </header>
+        <!-- content -->
+        <div class="content">
+            <div id="wrapper">
+                <form action="" id="form-register">
+                    <div style="display: flex; width: 100%; justify-content: center; margin-bottom: 20px;">
+                      <img style="width: 90px; border-radius: 50%;" src="static/img/phuan1.png" alt="logo">
+                      <div>
+                        <span class="form-heading">&nbsp;&nbsp;&nbsp;ĐĂNG KÍ</span>
+                      </div>
                     </div>
-
-
-
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" class="form-input" placeholder="Tên đăng nhập">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" class="form-input" placeholder="Mật khẩu">
+                            <div id="eye">
+                                <i class="far fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" class="form-input" placeholder="Tên đăng nhập">
+                        </div>
+                        <div class="form-group">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" class="form-input" placeholder="Mật khẩu">
+                            <div id="eye">
+                                <i class="far fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 100%; padding: 5px 0;">
+                      <div style="width: 49%; display: inline-block; text-align: left;">
+                        <input style="cursor: pointer;" type="checkbox" id="remenberpasswork">
+                        <span style="color: #fff; font-size: 12px;"> Ghi nhớ đăng nhập</span>
+                      </div>
+                      <div style="width: 49%; display: inline-block; text-align: right;">
+                        <a href="#" style="color: #09f; font-size: 12px;">Quên mật khẩu?</a>
+                      </div>
+                    </div>
+                    <button style="" type="submit" class="form-submit">Đăng nhập</button>
+                    <div style="width: 100%; text-align: center; padding: 10px;">
+                        <span style="color: #fff; font-size: 11px;">Chưa có tài khoản</span>
+                        <a href="formDangKy.html" style="color: #09f; font-size: 12px;">Đăng ký ngay</a>
+                    </div>
+                    <div style="display: flex; margin-top: 20px;">
+                        <div class="kengang"></div>
+                        <span style="color: #ccc; padding: 0 16px; text-transform: uppercase; font-size: 12px;">hoặc</span>
+                        <div class="kengang"></div>
+                    </div>
+                    <div class="google-btn">
+                        <div class="google-icon-wrapper">
+                          <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                        </div>
+                        <p class="btn-text"><b>Đăng nhập bằng Google</b></p>
+                    </div>
+                    <div class="facebook-btn">
+                        <div class="facebook-icon-wrapper">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </div>
+                        <p class="btn-text"><b>Đăng nhập bằng Facebook</b></p>
+                    </div>
+                </form>
+            </div>
+            <div class="banner" style="top: 55%;">
+                <div class="clouds">
+                    <img src="static/img/cloud1.png" style="--i:1;">
+                    <img src="static/img/cloud2.png" style="--i:2;">
+                    <img src="static/img/cloud3.png" style="--i:3;">
                 </div>
             </div>
-
         </div>
-    </div>
-
-
-    <div id="footer">
-        <marquee class="chuchay1">BOOKSTORE VIỆT NAM ĐEM LẠI SỰ KHÁM PHÁ</marquee>
-        <br /><br />
-        <div class="ketthuc"><a>© 2019 BẢN QUYỀN THUỘC VỀ BOOKSTORE VIỆT NAM</a></div>
-        <br />
-        <div class="info">
-            <h2 style="font-size: 32px; line-height:4px; text-transform: uppercase; letter-spacing: 2px;">Thông Tin Liên Hệ</h2>
-            <div class="text-info">
-                <i class="ti-location-pin">
-                    Địa chỉ: 192 Phạm Huy Thông, phường 5, Gò Vấp, Hồ Chí Minh<br />
-                </i>
-                <i class="ti-mobile"> Điện thoại: 0941622670<br /> </i>
-                <i class="ti-email"> Email: phuan2017@gmail.com <br /></i>
-                <i class="ti-world"> Web: <a href="index.html">www.shopbansach.com</a>
-                    <br /></i>
-            </div>
-            <div class="icon">
-                <a target="_blank" rel="noopener" href="https://www.facebook.com/11012001an/"><i class="ti-facebook"></i></a>
-                <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UC7oaiP-3mAVxrEbNivGouxQ"><i class="ti-youtube"></i></a>
-                <a target="_blank" rel="noopener" href="https://twitter.com/AnPh78450950"><i class="ti-twitter"></i></a>
-                <a target="_blank" rel="noopener" href="https://www.instagram.com/ngphuan2017/"><i class="ti-instagram"></i></a>
+        <div id="footer">
+            <marquee class="chuchay1">BOOKSTORE VIỆT NAM ĐEM LẠI SỰ KHÁM PHÁ</marquee>
+            <br /><br />
+            <div class="ketthuc"><a>© 2019 BẢN QUYỀN THUỘC VỀ BOOKSTORE VIỆT NAM</a></div>
+            <br />
+            <div class="info">
+                <h2 style="font-size: 32px; line-height:4px; text-transform: uppercase; letter-spacing: 2px;">Thông Tin Liên Hệ</h2>
+                <div class="text-info">
+                    <i class="ti-location-pin">
+                        Địa chỉ: 192 Phạm Huy Thông, phường 5, Gò Vấp, Hồ Chí Minh<br />
+                    </i>
+                    <i class="ti-mobile"> Điện thoại: 0941622670<br /> </i>
+                    <i class="ti-email"> Email: phuan2017@gmail.com <br /></i>
+                    <i class="ti-world"> Web: <a href="index.html">www.shopbansach.com</a>
+                        <br /></i>
+                </div>
+                <div class="icon">
+                    <a target="_blank" rel="noopener" href="https://www.facebook.com/11012001an/"><i class="ti-facebook"></i></a>
+                    <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UC7oaiP-3mAVxrEbNivGouxQ"><i class="ti-youtube"></i></a>
+                    <a target="_blank" rel="noopener" href="https://twitter.com/AnPh78450950"><i class="ti-twitter"></i></a>
+                    <a target="_blank" rel="noopener" href="https://www.instagram.com/ngphuan2017/"><i class="ti-instagram"></i></a>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <a id="backtop" href="#container" class="ti-arrow-circle-up"></a>
 </body>
