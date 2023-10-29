@@ -68,9 +68,6 @@
     cursor: pointer;
     background: -webkit-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
 }
-.form-submit:hover{
-    
-}
 .form-submit:active{
     border: 1px solid #54a0ff;
     transform: scale(1.05);
@@ -149,4 +146,92 @@
 }
 .facebook-btn:active {
     background: #1669f2;
+}
+/* button */
+
+.button {
+  font-family: Tahoma, sans-serif;
+  margin-top: 10px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 42px;
+  color: #ebff33;
+  font-size: 21px;
+  line-height: 200%;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  z-index: 1;
+}
+.button span {
+  position: absolute;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  z-index: 1;
+}
+.button .border {
+  border: 1px solid #ebff33;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.button .top, .button .bottom, .button .left, .button .right {
+  background-color: #ebff33;
+  height: 1px;
+  width: 0;
+}
+.button .left, .button .right {
+  height: 0;
+  width: 1px;
+}
+.button .top {
+  top: -5px;
+  left: -15px;
+}
+.button .bottom {
+  bottom: -5px;
+  right: -15px;
+}
+.button .left {
+  top: -15px;
+  right: -5px;
+}
+.button .right {
+  bottom: -15px;
+  left: -5px;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover .border {
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+}
+.button:hover .top, .button:hover .bottom {
+  width: 230px;
+}
+.button:hover .left, .button:hover .right {
+  height: 40px;
+}
+.button:hover .top {
+  left: -5px;
+}
+.button:hover .bottom {
+  right: -5px;
+}
+.button:hover .left {
+  top: -5px;
+}
+.button:hover .right {
+  bottom: -5px;
+}
+.button .text {
+  position: relative;
+  letter-spacing: 0.03em;
 }

@@ -1,352 +1,414 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>Phú An Shop</title>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="static/img/iconshop.png" rel="shortcut icon" />
-      <link href="static/css/style.css" rel="stylesheet" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-      <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-      <script src="static/js/header.js"></script>
-      <script src="static/js/backtop.js"></script>
-  </head>
-  <body>
-      <div id="main">
-          <header>
-              <div class="shop">
-                <div class="inline-block logo">
-                  <a href="index.html" title="Phú An Shop" rel="home">
-                    <img src="static/img/logo.png" alt="Phú An Shop" />
-                </a>
-                </div>
-                <div class="inline-block search">
-                  <form class="form-inline" action="/action_page.php">
-                    <div class="inline-block text-search">
-                        <input id="text-search" type="search" placeholder="Nhập sản phẩm bạn muốn tìm kiếm" value=""/>
-                    </div>
-                    <div class="inline-block btn-search">
-                        <button id="btn-search" onclick="search()" type="submit" value="Tìm kiếm">
-                          <i class="fa-solid fa-magnifying-glass" alt="Tìm kiếm"></i>
-                        </button>
-                    </div>
-                  </form>
-                </div>
-                <div class="inline-block basket">
-                    <a href="#" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-              </div>
-              <nav id="nav">
-                <ul>
-                    <li><a style="font-weight: bolder; color: white; background-color: #fa9e14;"
-                        href="index.html"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
-                    <li><a href="GioiThieu.html">Giới thiệu</a></li>
-                    <li>
-                      <a href="#">
-                        Đồ Dùng Học Sinh <i class="fa-sharp fa-solid fa-caret-down"></i>
-                      </a>
-                      <ul class="subnav">
-                        <li><a href="#">Vở học sinh</a></li>
-                        <li><a href="#">Bút học sinh</a></li>
-                        <li><a href="#">Dụng cụ học tập</a></li>
-                        <li><a href="#">Balo - Túi Cặp</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#">
-                        Văn Phòng Phẩm <i class="fa-sharp fa-solid fa-caret-down"></i>
-                      </a>
-                      <ul class="subnav">
-                        <li><a href="#">Đồ dùng văn phòng</a></li>
-                        <li><a href="#">Giấy văn phòng</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#">
-                        Đồ chơi <i class="fa-sharp fa-solid fa-caret-down"></i>
-                      </a>
-                      <ul class="subnav">
-                        <li><a href="#">Đồ chơi điện tử</a></li>
-                        <li><a href="#">Đồ chơi thủ công</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#">
-                        Sản phẩm khuyến mãi <i class="fa-sharp fa-solid fa-caret-down"></i>
-                      </a>
-                      <ul class="subnav">
-                        <li><a href="#">Combo khuyến mãi mỗi tháng</a></li>
-                        <li><a href="#">Combo khuyến mãi đầu năm học</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#">
-                        Mỹ phẩm <i class="fa-sharp fa-solid fa-caret-down"></i>
-                      </a>
-                      <ul class="subnav">
-                        <li><a href="#">Kem</a></li>
-                        <li><a href="#">Sữa rửa mặt</a></li>
-                        <li><a href="#">Sữa tắm - dầu gội</a></li>
-                        <li><a href="#">Nước hoa</a></li>
-                        <li><a href="#">Đồ dùng sinh hoạt</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#footer">Liên Hệ</a></li>
-                    <li>
-                      <a href="#">
-                        Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i>
-                      </a>
-                      <ul class="subnav">
-                        <li><a style="color: blue;" href="formDangNhap.html"><i class="fa-solid fa-user"></i> Đăng nhập</a></li>
-                        <li><a style="color: green;" href="formDangKy.html"><i class="fa-solid fa-right-from-bracket"></i> Đăng kí</a></li>
-                      </ul>
-                    </li>
-                </ul>
-              </nav>
-        </header>
-        <div class="container-fluid grid" id="slider">
-          <div class="banner">
-            <div class="clouds">
-                <img src="static/img/cloud1.png" style="--i:1;">
-                <img src="static/img/cloud2.png" style="--i:2;">
-                <img src="static/img/cloud3.png" style="--i:3;">
+
+<head>
+  <title>Phú An Shop</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="static/img/iconshop.png" rel="shortcut icon" />
+  <link href="static/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  <script src="static/js/header.js"></script>
+  <script src="static/js/backtop.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div class="shop">
+        <div class="inline-block logo">
+          <a href="index.html" title="Phú An Shop" rel="home">
+            <img src="static/img/logo.png" alt="Phú An Shop" />
+          </a>
+        </div>
+        <div class="inline-block search">
+          <form class="form-inline" action="/action_page.php">
+            <div class="inline-block text-search">
+              <input id="text-search" type="search" placeholder="Nhập sản phẩm bạn muốn tìm kiếm" value="" />
             </div>
-          </div>
-          <div class="text-slider">
-            <img id="logo-banner" src="static/img/shops.png" alt="Phú An Shop">
-            <h4>Giá rẻ và chất lượng</h4>
+            <div class="inline-block btn-search">
+              <button id="btn-search" onclick="search()" type="submit" value="Tìm kiếm">
+                <i class="fa-solid fa-magnifying-glass" alt="Tìm kiếm"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="inline-block basket">
+          <a href="#" class="btn-product"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a style="font-weight: bolder; color: white; background-color: #fa9e14;" href="index.html"><i
+                class="fa-solid fa-house"></i> Trang Chủ</a></li>
+          <li><a href="GioiThieu.html">Giới thiệu</a></li>
+          <li>
+            <a href="#">
+              Đồ Dùng Học Sinh <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="subnav">
+              <li><a href="#">Vở học sinh</a></li>
+              <li><a href="#">Bút học sinh</a></li>
+              <li><a href="#">Dụng cụ học tập</a></li>
+              <li><a href="#">Balo - Túi Cặp</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              Văn Phòng Phẩm <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="subnav">
+              <li><a href="#">Đồ dùng văn phòng</a></li>
+              <li><a href="#">Giấy văn phòng</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              Đồ chơi <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="subnav">
+              <li><a href="#">Đồ chơi điện tử</a></li>
+              <li><a href="#">Đồ chơi thủ công</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              Sản phẩm khuyến mãi <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="subnav">
+              <li><a href="#">Combo khuyến mãi mỗi tháng</a></li>
+              <li><a href="#">Combo khuyến mãi đầu năm học</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              Mỹ phẩm <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="subnav">
+              <li><a href="#">Kem</a></li>
+              <li><a href="#">Sữa rửa mặt</a></li>
+              <li><a href="#">Sữa tắm - dầu gội</a></li>
+              <li><a href="#">Nước hoa</a></li>
+              <li><a href="#">Đồ dùng sinh hoạt</a></li>
+            </ul>
+          </li>
+          <li><a href="#footer">Liên Hệ</a></li>
+          <li>
+            <a href="#">
+              Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="subnav">
+              <li><a style="color: blue;" href="formDangNhap.html"><i class="fa-solid fa-user"></i> Đăng nhập</a></li>
+              <li><a style="color: green;" href="formDangKy.html"><i class="fa-solid fa-right-from-bracket"></i> Đăng
+                  kí</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container-fluid grid" id="slider">
+      <div class="banner">
+        <div class="clouds">
+          <img src="static/img/cloud1.png" style="--i:1;">
+          <img src="static/img/cloud2.png" style="--i:2;">
+          <img src="static/img/cloud3.png" style="--i:3;">
+        </div>
+      </div>
+      <div class="text-slider">
+        <img id="logo-banner" src="static/img/shops.png" alt="Phú An Shop">
+        <h4>Giá rẻ và chất lượng</h4>
+      </div>
+    </div>
+    <!--  -->
+    <!--  -->
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="card card-block">
+            <h4 class="card-title text-right"><i class="fa-solid fa-gear"></i></h4>
+            <img style="max-width: 200px;" src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg"
+              alt="Photo of sunset">
+            <h5 class="card-title mt-3 mb-3">Sierra Web Development • Owner</h5>
+            <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
           </div>
         </div>
-        <div id="content" class="container">
-          <div class="content-section">
-            <div class="content-title">
-              <a href=""><h2 class="section-heading">Top bán chạy</h2></a>
+      </div>
+    </div>
+    <!--  -->
+    <!--  -->
+    <div id="content" class="container">
+      <div class="content-section">
+        <div class="content-title">
+          <a href="">
+            <h2 class="section-heading">Top bán chạy</h2>
+          </a>
+        </div>
+        <div class="products-block">
+          <div class="product-item">
+            <a href="">
+              <img src="static/img/Sale_Top/z3221786161940_53a53a97be21b6ee29c61ed45be9bc24.jpg" alt=""
+                class="product-img">
+              <p class="product-name">Bút xóa Thiên Long</p>
+              <p class="price">26.000&#8363; <del class="del-price">29.000&#8363;</del></p>
+            </a>
+            <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+          <div class="product-item">
+            <a href="">
+              <img src="static/img/Sale_Top/WB021.jpg" alt="" class="product-img">
+              <p class="product-name">Bút lông bảng Thiên Long</p>
+              <p class="price">6.800&#8363; <del class="del-price">8.700&#8363;</del></p>
+            </a>
+            <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+          <div class="product-item">
+            <a href="">
+              <img src="static/img/Sale_Top/PM041.jpg" alt="" class="product-img">
+              <p class="product-name">Bút lông dầu Thiên Long</p>
+              <p class="price">10.800&#8363; <del class="del-price">12.000&#8363;</del></p>
+            </a>
+            <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+          <div class="product-item">
+            <a href="">
+              <img src="static/img/Sale_Top/bbt002_0108_163505_tdfXOY.jpg" alt="" class="product-img">
+              <p class="product-name">Bút bi Thiên Long</p>
+              <p class="price">4.500&#8363; <del class="del-price">5.000&#8363;</del></p>
+            </a>
+            <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+          <div class="product-item">
+            <a href="">
+              <img src="static/img/Sale_Top/z3218931562602_c1ce523c82d7b20fa02debce9c56eba8.jpg" alt=""
+                class="product-img">
+              <p class="product-name">Khẩu trang Y tế</p>
+              <p class="price">33.000&#8363; <del class="del-price">35.000&#8363;</del></p>
+            </a>
+            <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+          <div class="product-item">
+            <a href="">
+              <img src="static/img/Sale_Top/ThienLongHL-03(FS).jpg" alt="" class="product-img">
+              <p class="product-name">Bút dạ quang Thiên Long</p>
+              <p class="price">9.000&#8363; <del class="del-price">10.000&#8363;</del></p>
+            </a>
+            <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="content-section">
+        <div class="content-title">
+          <a href="">
+            <h2 class="section-heading">Đồ dùng học sinh</h2>
+          </a>
+        </div>
+        <div class="row">
+          <div class="block-section">
+            <div class="banner-block">
+              <a href="">
+                <img src="" onerror="this.src='static/img/404.png'" alt="">
+              </a>
             </div>
             <div class="products-block">
-              <div class="product-item">
-                <a href="">
-                  <img src="static/img/Sale_Top/z3221786161940_53a53a97be21b6ee29c61ed45be9bc24.jpg" alt="" class="product-img">
-                  <p class="product-name">Bút xóa Thiên Long</p>
-                  <p class="price">26.000&#8363; <del class="del-price">29.000&#8363;</del></p>
-                </a>
-                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-              </div>
-              <div class="product-item">
-                <a href="">
-                  <img src="static/img/Sale_Top/WB021.jpg" alt="" class="product-img">
-                  <p class="product-name">Bút lông bảng Thiên Long</p>
-                  <p class="price">6.800&#8363; <del class="del-price">8.700&#8363;</del></p>
-                </a>
-                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-              </div>
-              <div class="product-item">
-                <a href="">
-                  <img src="static/img/Sale_Top/PM041.jpg" alt="" class="product-img">
-                  <p class="product-name">Bút lông dầu Thiên Long</p>
-                  <p class="price">10.800&#8363; <del class="del-price">12.000&#8363;</del></p>
-                </a>
-                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-              </div>
-              <div class="product-item">
-                <a href="">
-                  <img src="static/img/Sale_Top/bbt002_0108_163505_tdfXOY.jpg" alt="" class="product-img">
-                  <p class="product-name">Bút bi Thiên Long</p>
-                  <p class="price">4.500&#8363; <del class="del-price">5.000&#8363;</del></p>
-                </a>
-                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-              </div>
-              <div class="product-item">
-                <a href="">
-                  <img src="static/img/Sale_Top/z3218931562602_c1ce523c82d7b20fa02debce9c56eba8.jpg" alt="" class="product-img">
-                  <p class="product-name">Khẩu trang Y tế</p>
-                  <p class="price">33.000&#8363; <del class="del-price">35.000&#8363;</del></p>
-                </a>
-                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-              </div>
-              <div class="product-item">
-                <a href="">
-                  <img src="static/img/Sale_Top/ThienLongHL-03(FS).jpg" alt="" class="product-img">
-                  <p class="product-name">Bút dạ quang Thiên Long</p>
-                  <p class="price">9.000&#8363; <del class="del-price">10.000&#8363;</del></p>
-                </a>
-                <button type="submit" class="btn-product js-add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
-              </div>
-              <div class="clear"></div>
+              <!--  -->
             </div>
           </div>
-          <div class="content-section">
-            <div class="content-title">
-              <a href=""><h2 class="section-heading">Đồ dùng học sinh</h2></a>
-            </div>
-            <div class="row">
-              <div class="block-section">
-                <div class="banner-block">
-                  <a href="">
-                    <img src="" onerror="this.src='static/img/404.png'" alt="">
-                  </a>
-                </div>
-                <div class="products-block">
-                  <!--  -->
-                </div>
-              </div>
-              <div class="col">
-                <!--  -->
-              </div>
-            </div>
-          </div>
-          <div class="content-section">
-            <div class="content-title">
-              <a href=""><h2 class="section-heading">Văn phòng phẩm</h2></a>
-            </div>
-            <div class="row">
-              <div class="block-section">
-                <div class="banner-block">
-                  <a href="">
-                    <img src="" onerror="this.src='static/img/404.png'" alt="">
-                  </a>
-                </div>
-                <div class="products-block">
-                  <!--  -->
-                </div>
-              </div>
-              <div class="col">
-                <!--  -->
-              </div>
-            </div>
-          </div>
-          <div class="content-section">
-            <div class="content-title">
-              <a href=""><h2 class="section-heading">Đồ chơi</h2></a>
-            </div>
-            <div class="row">
-              <div class="block-section">
-                <div class="banner-block">
-                  <a href="">
-                    <img src="" onerror="this.src='static/img/404.png'" alt="">
-                  </a>
-                </div>
-                <div class="products-block">
-                  <!--  -->
-                </div>
-              </div>
-              <div class="col">
-                <!--  -->
-              </div>
-            </div>
-          </div>
-          <div class="content-section">
-            <div class="content-title">
-              <a href=""><h2 class="section-heading">Sản phẩm khuyến mãi</h2></a>
-            </div>
-            <div class="row">
-              <div class="block-section">
-                <div class="banner-block">
-                  <a href="">
-                    <img src="" onerror="this.src='static/img/404.png'" alt="">
-                  </a>
-                </div>
-                <div class="products-block">
-                  <!--  -->
-                </div>
-              </div>
-              <div class="col">
-                <!--  -->
-              </div>
-            </div>
-          </div>
-          <div class="content-section">
-            <div class="content-title">
-              <a href=""><h2 class="section-heading">Mỹ phẩm</h2></a>
-            </div>
-            <div class="row">
-              <div class="block-section">
-                <div class="banner-block">
-                  <a href="">
-                    <img src="" onerror="this.src='static/img/404.png'" alt="">
-                  </a>
-                </div>
-                <div class="products-block">
-                  <!--  -->
-                </div>
-              </div>
-              <div class="col">
-                <!--  -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="footer">
-          <marquee class="chuchay1">BOOKSTORE VIỆT NAM ĐEM LẠI SỰ KHÁM PHÁ</marquee>
-          <br /><br />
-          <div class="ketthuc"><a>© 2019 BẢN QUYỀN THUỘC VỀ BOOKSTORE VIỆT NAM</a></div>
-          <br />
-          <div class="info">
-              <h2 style="font-size: 32px; line-height:4px; text-transform: uppercase; letter-spacing: 2px;">Thông Tin Liên Hệ</h2>
-              <div class="text-info">
-                  <i class="ti-location-pin">
-                      Địa chỉ: 192 Phạm Huy Thông, phường 5, Gò Vấp, Hồ Chí Minh<br />
-                  </i>
-                  <i class="ti-mobile"> Điện thoại: 0941622670<br /> </i>
-                  <i class="ti-email"> Email: phuan2017@gmail.com <br /></i>
-                  <i class="ti-world"> Web: <a href="index.html">www.shopbansach.com</a>
-                      <br /></i>
-              </div>
-              <div id="icon">
-                <ul class="social">
-                  <li>
-                    <a target="_blank" rel="noopener" href="https://www.facebook.com/11012001an/">
-                      <i class="fa-brands fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UC7oaiP-3mAVxrEbNivGouxQ">
-                      <i class="fa-brands fa-youtube"></i>
-                    </a>
-                    </li>
-                  <li>
-                    <a target="_blank" rel="noopener" href="https://twitter.com/AnPh78450950">
-                      <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    
-                  </li>
-                  <li>
-                    <a target="_blank" rel="noopener" href="https://www.instagram.com/an.np_it/">
-                      <i class="fa-brands fa-instagram"></i>
-                    </a> 
-                  </li>
-                </ul>
-              </div>
+          <div class="col">
+            <!--  -->
           </div>
         </div>
       </div>
-      <a id="backtop" href="#main" class="gototop fa-solid fa-circle-chevron-up"></a>
-      <div class="js-modal">
-        <div class="modal-container js-modal-container">
-          <div class="js-modal-close">
-            <i class="fa-solid fa-xmark"></i>
-          </div>
-          <header class="modal-header">
-            <img style="padding-top: 5%;" src="static/img/shopping-cart.png" alt="cart"><p style="margin-top: 3%;">Giỏ Hàng</p>
-          </header>
-          <div class="modal-body">
-            <div class="modal-img">
-              <img src="static/img/Sale_Top/z3221786161940_53a53a97be21b6ee29c61ed45be9bc24.jpg" alt="">
+      <div class="content-section">
+        <div class="content-title">
+          <a href="">
+            <h2 class="section-heading">Văn phòng phẩm</h2>
+          </a>
+        </div>
+        <div class="row">
+          <div class="block-section">
+            <div class="banner-block">
+              <a href="">
+                <img src="" onerror="this.src='static/img/404.png'" alt="">
+              </a>
             </div>
-            <div class="modal-quantity">
-              <button type="button" class="quantity">-</button>
-              <input style="width: 50px; background-color: #fff;" type="number" class="quantity" id="quantity" maxlength="12" min="1" size="2" value="1" step="0.01">
-              <button type="button" class="quantity">+</button>
-            </div>
-            <div class="btn-buy-product">
-              <button id="btn-buy-product"><i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ hàng</button>
+            <div class="products-block">
+              <!--  -->
             </div>
           </div>
-          <div class="modal-footer">
-            <p class="modal-help">Need <a href="#">help?</a></p>
+          <div class="col">
+            <!--  -->
           </div>
         </div>
       </div>
-      <script src="static/js/cart.js"></script>
-    </body>
+      <div class="content-section">
+        <div class="content-title">
+          <a href="">
+            <h2 class="section-heading">Đồ chơi</h2>
+          </a>
+        </div>
+        <div class="row">
+          <div class="block-section">
+            <div class="banner-block">
+              <a href="">
+                <img src="" onerror="this.src='static/img/404.png'" alt="">
+              </a>
+            </div>
+            <div class="products-block">
+              <!--  -->
+            </div>
+          </div>
+          <div class="col">
+            <!--  -->
+          </div>
+        </div>
+      </div>
+      <div class="content-section">
+        <div class="content-title">
+          <a href="">
+            <h2 class="section-heading">Sản phẩm khuyến mãi</h2>
+          </a>
+        </div>
+        <div class="row">
+          <div class="block-section">
+            <div class="banner-block">
+              <a href="">
+                <img src="" onerror="this.src='static/img/404.png'" alt="">
+              </a>
+            </div>
+            <div class="products-block">
+              <!--  -->
+            </div>
+          </div>
+          <div class="col">
+            <!--  -->
+          </div>
+        </div>
+      </div>
+      <div class="content-section">
+        <div class="content-title">
+          <a href="">
+            <h2 class="section-heading">Mỹ phẩm</h2>
+          </a>
+        </div>
+        <div class="row">
+          <div class="block-section">
+            <div class="banner-block">
+              <a href="">
+                <img src="" onerror="this.src='static/img/404.png'" alt="">
+              </a>
+            </div>
+            <div class="products-block">
+              <!--  -->
+            </div>
+          </div>
+          <div class="col">
+            <!--  -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus"
+                data-field="">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+            </span>
+            <input type="number" id="quantity" name="quantity" class="form-control input-number" value="1" min="1"
+              max="1000">
+            <span class="input-group-btn">
+              <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus"
+                data-field="">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <marquee class="chuchay1">BOOKSTORE VIỆT NAM ĐEM LẠI SỰ KHÁM PHÁ</marquee>
+      <br /><br />
+      <div class="ketthuc"><a>© 2019 BẢN QUYỀN THUỘC VỀ BOOKSTORE VIỆT NAM</a></div>
+      <br />
+      <div class="info">
+        <h2 style="font-size: 32px; line-height:4px; text-transform: uppercase; letter-spacing: 2px;">Thông Tin Liên Hệ
+        </h2>
+        <div class="text-info">
+          <i class="ti-location-pin">
+            Địa chỉ: 192 Phạm Huy Thông, phường 5, Gò Vấp, Hồ Chí Minh<br />
+          </i>
+          <i class="ti-mobile"> Điện thoại: 0941622670<br /> </i>
+          <i class="ti-email"> Email: phuan2017@gmail.com <br /></i>
+          <i class="ti-world"> Web: <a href="index.html">www.shopbansach.com</a>
+            <br /></i>
+        </div>
+        <div id="icon">
+          <ul class="social">
+            <li>
+              <a target="_blank" rel="noopener" href="https://www.facebook.com/11012001an/">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UC7oaiP-3mAVxrEbNivGouxQ">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="https://twitter.com/AnPh78450950">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="https://www.instagram.com/an.np_it/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="backtop" href="#main" class="gototop fa-solid fa-circle-chevron-up"></a>
+  <div class="js-modal">
+    <div class="modal-container js-modal-container">
+      <div class="js-modal-close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <header class="modal-header">
+        <img style="padding-top: 5%;" src="static/img/shopping-cart.png" alt="cart">
+        <p style="margin-top: 3%;">Giỏ Hàng</p>
+      </header>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="static/img/Sale_Top/z3221786161940_53a53a97be21b6ee29c61ed45be9bc24.jpg" alt="">
+        </div>
+        <div class="modal-quantity">
+          <button type="button" class="quantity">-</button>
+          <input style="width: 50px; background-color: #fff;" type="number" class="quantity" id="quantity"
+            maxlength="12" min="1" size="2" value="1" step="0.01">
+          <button type="button" class="quantity">+</button>
+        </div>
+        <div class="btn-buy-product">
+          <button id="btn-buy-product"><i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ hàng</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="modal-help">Need <a href="#">help?</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="static/js/cart.js"></script>
+</body>
+
 </html>
